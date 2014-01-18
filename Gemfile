@@ -16,9 +16,8 @@ gem 'mysql2'
 gem 'rolify'
 gem 'simple_form'
 gem 'thin'
-
 gem "paperclip", "~> 3.0"
-
+gem 'acts-as-taggable-on'
 
 group :development do
   gem 'sextant'
