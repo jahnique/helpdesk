@@ -1,5 +1,62 @@
-%h3 User
-%p
-  User: #{@user.name}
-%p
-  Email: #{@user.email if @user.email}
+.row
+  .col-md-12
+    %h3 User profile
+.row
+  .col-md-2
+    =image_tag @user.avatar.url(:medium)
+  .col-md-5
+    %p
+      %b User:
+      #{@user.name}
+    %p
+      %b Position:
+      #{@user.position if @user.position}
+    %p
+      %b Location:
+      #{@user.location if @user.location}
+  .col-md-5
+    %h4
+      About me:
+    %p
+      #{@user.about_me if @user.about_me}
+.row
+  .col-md-2
+    %p
+      Level 1 (Rookie)
+    %p
+      160 Points
+  .col-md-10
+    %h4
+      Skills in IT
+    %p
+      Web development, Computer installation, Server issues
+    .row
+      .col-md-4
+        %h4
+          Owned products
+        %ul
+          %li iPhone 4s
+          %li iPad Air
+          %li Samsung Galaxy S3
+      .col-md-4
+        %h4
+          Running operating systems
+        %ul
+          %li iOS 7
+          %li Android 4.4.2
+      .col-md-4
+        %h4
+          Owned software
+        %ul
+          %li Dropbox
+          %li Skype
+          %li Trello
+          %li Airmail
+    .row
+      .col-md-12
+        %h4
+          Tags
+        %ul.list-inline
+          - @user.tag_list.each do |tag|
+            %li= link_to tag, tag_path(tag)
+
