@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
-    @users = User.all
+    if params[:tag]
+      @users = User.tagged_with(params[:tag])
+    else
+      @users = User.all
+    end
   end
 
   def show
