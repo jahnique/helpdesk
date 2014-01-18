@@ -200,6 +200,8 @@ GEM
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     sexp_processor (4.4.1)
+    sextant (0.2.4)
+      rails (>= 3.2)
     simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
@@ -270,6 +272,7 @@ DEPENDENCIES
   rolify
   rspec-rails
   sass-rails (~> 4.0.0)
+  sextant
   simple_form
   thin
   turbolinks
