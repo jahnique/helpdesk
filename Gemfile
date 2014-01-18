@@ -16,6 +16,10 @@ gem 'mysql2'
 gem 'rolify'
 gem 'simple_form'
 gem 'thin'
+
+gem "paperclip", "~> 3.0"
+
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
